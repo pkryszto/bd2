@@ -1,4 +1,0 @@
-
-public interface obsluga {
-	public void wypisz();
-}

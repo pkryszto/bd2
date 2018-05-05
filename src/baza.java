@@ -1,6 +1,8 @@
 import java.sql.*;
+import javax.swing.*;
 
 public class baza {
+	public static Connection connection;
 	public static void main(String[] argv) {
 	        System.out.println("-------- Oracle JDBC Connection Testing ------");
 
@@ -18,7 +20,7 @@ public class baza {
 
 	        System.out.println("Oracle JDBC Driver Registered!");
 
-	        Connection connection = null;
+	        connection = null;
 
 	        try {
 
@@ -38,12 +40,15 @@ public class baza {
 	        } else {
 	            System.out.println("Failed to make connection!");
 	        }
-	        Pilkarz p = new Pilkarz();
+	       // Pilkarz p = new Pilkarz();
+	       
 	        //p.dodaj(connection, "Luis", "Armweak", "25", "P", "1805", "Anglia", "Villareal", "Nike", "9003");
 	        //p.usun(connection, 8888);
 	        //p.usun(connection, 1901);
 	        //p.usun(connection, "Luis", "Armweak");
-	        p.wypisz(connection);
+	        //p.wypisz(connection);
+	        InterMenu Menu = new InterMenu();
+	        Menu.pack();
 	    }
 }
 
